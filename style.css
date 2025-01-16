@@ -7,7 +7,7 @@
 
 /* Root Variables for Colors and Fonts */
 :root {
-  --primary-color: #3B82F6; /* RippleMatch blue */
+  --primary-color: #C7DFC5; 
   --secondary-color: #F3F4F6; /* Light gray background */
   --text-color: #1F2937; /* Dark gray for text */
   --text-muted: #6B7280; /* Muted gray for less important text */
@@ -135,3 +135,4 @@ footer a:hover {
     height: 300px;
   }
 }
+/* Chat GPT generated Styles */
