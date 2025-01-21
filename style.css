@@ -7,12 +7,13 @@
 
 /* Root Variables for Colors and Fonts */
 :root {
-  --primary-color: #31522e; 
-  --secondary-color: #F3F4F6; /* Light gray background */
-  --text-color: #1F2937; /* Dark gray for text */
-  --text-muted: #6B7280; /* Muted gray for less important text */
-  --highlight-color: #E5E7EB; /* Soft highlight */
-  --font-primary: 'Inter', sans-serif;
+  --primary-color: #31522e;
+  --secondary-color: #f3f4f6; /* Light gray background */
+  --text-color: #1f2937; /* Dark gray for text */
+  --text-muted: #6b7280; /* Muted gray for less important text */
+  --highlight-color-primary-background: rgb(158, 209, 158); /* Soft highlight */
+  --element-muted: rgb(224, 224, 224);
+  --font-primary: "Inter", sans-serif;
 }
 
 /* Body Styling */
@@ -24,7 +25,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
 /* Header */
 header {
   background-color: var(--primary-color);
@@ -51,11 +51,11 @@ nav a {
   color: white;
   font-weight: 600;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.1s ease;
 }
 
 nav a:hover {
-  color: var(--highlight-color);
+  color: var(--highlight-color-primary-background);
 }
 
 /* Main Content */
@@ -70,9 +70,17 @@ main {
 
 main h2 {
   font-size: 1.75rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--highlight-color);
+  border-bottom: 2px solid var(--element-muted);
+  padding-bottom: 0.5rem;
+}
+
+main h3 {
+  font-size: 1.75rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 100;
   padding-bottom: 0.5rem;
 }
 
@@ -112,7 +120,7 @@ footer {
 }
 
 footer a {
-  color: var(--highlight-color);
+  color: var(--element-muted);
   text-decoration: none;
 }
 
@@ -135,4 +143,58 @@ footer a:hover {
     height: 300px;
   }
 }
+/* Member Cards */
+
+#CodeCrusaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid --element-muted;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.member-photo {
+  width: 80px;
+  height: 80px;
+  background: var(--element-muted);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.member-role {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin: 5px 0;
+}
+
+.member-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
 /* Chat GPT generated Styles */
