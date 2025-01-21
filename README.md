@@ -1,2 +1,2 @@
 # Team3.github.io
-- Team3's progress on FiTR
+- Code Crusaders's progress on FiTR
