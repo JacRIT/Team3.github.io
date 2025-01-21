@@ -161,6 +161,7 @@ footer a:hover {
   padding: 20px;
   margin: 20px 0;
   transition: transform 0.2s, box-shadow 0.2s;
+  gap: 10%;
 }
 
 .team-member:hover {
@@ -169,11 +170,20 @@ footer a:hover {
 }
 
 .member-photo {
-  width: 80px;
+  width: 80px; /* Set the size of the container */
   height: 80px;
-  background: var(--element-muted);
-  border-radius: 50%;
-  margin-right: 20px;
+  border-radius: 50%; /* Makes the container circular */
+  overflow: hidden; /* Ensures the image stays within the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the image */
+  background: #ddd; /* Optional background color for fallback */
+}
+
+.member-photo img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Ensure it fills while maintaining the circular shape */
+  object-fit: cover; /* Crop the image to fit neatly within the circle */
 }
 
 .member-info {
