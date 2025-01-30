@@ -26,8 +26,10 @@ jobs:
       - name: Build with Jekyll
         run: bundle exec jekyll build
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.PAT }}
-          publish_dir: ./_site
+        uses: actions/deploy-pages@v3
