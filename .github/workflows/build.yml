@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          submodules: true # This ensures submodules are cloned
+      # - name: Checkout Repository
+      #   uses: actions/checkout@v3
+      #   with:
+      #     submodules: true # This ensures submodules are cloned
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
