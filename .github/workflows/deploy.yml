@@ -2,7 +2,7 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -31,18 +31,18 @@ jobs:
         with:
           version: 8
           run_install: false
-
+      
       - name: List directory contents (for debugging)
         run: ls -la && ls -la codecrusaders
-
+      
       - name: Install dependencies
         working-directory: ./codecrusaders
         run: pnpm install
-
+      
       - name: Build with Next.js
         working-directory: ./codecrusaders
         run: pnpm build
-
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
