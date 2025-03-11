@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import Nav from "./ui/nav/nav"
 import "./globals.css"
-import Link from "next/link"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,33 +30,7 @@ export default function RootLayout({
       >
         <header>
           <h1>Career Roadmaps</h1>
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/team">Team</Link>
-              </li>
-              <li>
-                <Link href="/reports_and_metrics">Metrics and Reports</Link>
-              </li>
-              <li>
-                <Link href="/process">Process and Plan</Link>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="https://github.com/JacRIT/Team3.github.io/wiki"
-                >
-                  Wiki/Documentation
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <Nav></Nav>
         </header>
         <main>{children}</main>
       </body>
