@@ -24,8 +24,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-          cache: 'npm'
-          cache-dependency-path: 'codecrusaders/package-lock.json'
+          # Removing the cache option since it's causing issues
+      - name: List directory contents (for debugging)
+        run: ls -la && ls -la codecrusaders
       - name: Install dependencies
         working-directory: ./codecrusaders
         run: npm ci
