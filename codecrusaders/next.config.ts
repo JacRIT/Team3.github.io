@@ -2,8 +2,8 @@ import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "",
-  assetPrefix: "",
+  basePath: process.env.NODE_ENV === "production" ? "/Team3.github.io" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/Team3.github.io/" : "",
   images: {
     unoptimized: true,
   },
