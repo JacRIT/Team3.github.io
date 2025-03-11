@@ -25,9 +25,12 @@ jobs:
         with:
           node-version: "18"
           cache: 'npm'
+          cache-dependency-path: 'codecrusaders/package-lock.json'
       - name: Install dependencies
+        working-directory: ./codecrusaders
         run: npm ci
       - name: Build with Next.js
+        working-directory: ./codecrusaders
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
